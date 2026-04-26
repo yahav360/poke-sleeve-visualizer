@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeSleeve Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>PokeSleeve Visualizer</h1>
+            <p>Search any Pokémon card and choose a sleeve color to see how it looks.</p>
+        </header>
+        
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="e.g. Eevee, Mewtwo...">
+            <button id="search-btn">Search</button>
+            <button id="remove-sleeve">Remove Sleeve</button>
+        </div>
+
+        <div id="search-results" class="search-results hidden"></div>
+
+        <div class="main-view">
+            <div id="main-sleeve" class="sleeve-bg">
+                <img id="main-card" src="https://images.pokemontcg.io/xy3/55_hires.png" alt="Selected Pokemon Card">
+            </div>
+        </div>
+
+        <div class="sleeve-section">
+            <h2>Sleeve Options</h2>
+            <div class="sleeve-grid" id="sleeve-grid">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
