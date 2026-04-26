@@ -168,3 +168,49 @@ button {
     width: 120px;
     display: block;
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Stack the search bar and buttons vertically */
+    .controls {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input[type="text"], #search-btn, #remove-sleeve {
+        width: 100%;
+    }
+
+    /* Allow the main card to shrink if the screen is super small */
+    #main-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Drop the search results from 5 columns down to 2 */
+    .search-results {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+        max-height: 300px;
+    }
+
+    /* Drop the sleeve grid from 4 columns down to 2 */
+    .sleeve-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Make sure the mini cards don't overflow their grid cells */
+    .mini-card {
+        width: 100%;
+        max-width: 120px;
+    }
+}
