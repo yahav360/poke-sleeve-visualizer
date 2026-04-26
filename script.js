@@ -30,9 +30,17 @@ function renderGrid() {
         // 3. Put the image inside the colored background square
         sleeveBg.appendChild(miniCard);
         
-        // 4. Click event changes the MAIN SLEEVE'S background color
+        // 4. THE UPDATE: Change color AND check for mobile scroll
         sleeveBg.addEventListener('click', () => {
             mainSleeve.style.backgroundColor = color;
+            
+            // If the screen is the size of a phone, scroll to the main card
+            if (window.innerWidth <= 600) {
+                mainSleeve.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
         });
         
         // 5. Add to grid
